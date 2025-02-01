@@ -1,7 +1,20 @@
 
 ## **Agent 동작원리**  
-![image](https://github.com/user-attachments/assets/25fe53a3-33de-4ffa-b438-7a64b6d14601)
+![image](https://github.com/user-attachments/assets/25fe53a3-33de-4ffa-b438-7a64b6d14601)  
 
+
+[사용자 질문] → [에이전트 루프 시작]
+         ↑          ↓
+         |     1. 생각(Thought)
+         |          ↓
+         |     2. 행동 선택(Action)
+         |          ↓
+[최종 답변] ← 3. 도구 실행(Tool Execution)
+         ↑          ↓
+         |     4. 관찰(Observation)
+         |          ↓
+         └── 5. 결과 충분? (No → 1로 돌아가기)
+                        (Yes → 최종 답변 반환)  
 
 
 LangChain의 **"Agent"**(에이전트)는 주어진 목표를 달성하기 위해 도구(예: 검색, 계산, API 호출 등)를 활용하여 동적으로 의사결정을 내리는 시스템입니다.
